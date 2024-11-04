@@ -1,5 +1,4 @@
 const productList = document.getElementById('productList')
-
 //Task 2: Fetch Products from the API Using Fetch and Promises
 fetch('https://www.course-api.com/javascript-store-products')
     .then(response=> {
@@ -28,3 +27,8 @@ listItem.innerHTML = `${productName} by ${companyName}: $${productPrice}
 
 productList.appendChild(listItem)
 })})
+
+//Task 4: Handle Errors Gracefully
+.catch(error => {
+    console.error('Failed to load products. Please try again later', error)
+})
